@@ -2,6 +2,10 @@
 
 A Bridge between Houdini and Maya
 
+Tutorial:
+
+https://youtu.be/-RyY08267lY
+
 ## Houdini Setup
 
 ## Package Install (JSON)
