@@ -1,0 +1,10 @@
+{
+   "env": [
+      {
+         "hmlink": "C:/Users/otaku/Documents/GitHub/HMLink/Houdini"
+      }
+   ],
+   "hpath": [
+      "$hmlink"
+   ]
+}

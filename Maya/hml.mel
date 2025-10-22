@@ -1,0 +1,36 @@
+// 获取当前活动的工具架
+string $currentShelf = `tabLayout -q -selectTab $gShelfTopLevel`;
+
+// 定义Python命令（导出FBX）
+string $pythonOutCmd = "import maya.cmds as cmds\n";
+$pythonOutCmd += "path = \"C:/ModelIO/HMLinkTemp.fbx\"\n";
+$pythonOutCmd += "def hmlout(outpath):\n";
+$pythonOutCmd += "    cmds.file(outpath, force=True, options=\"v=0\", type=\"FBX export\", preserveReferences=True, exportSelected=True, prompt=False)\n";
+$pythonOutCmd += "hmlout(path)";
+
+// 创建导出按钮
+shelfButton
+    -label "OUT"
+    -image1 "pythonFamily.png"
+    -style "iconOnly"
+    -annotation "Export Selected as FBX"
+    -sourceType "python"
+    -command $pythonOutCmd
+    -parent $currentShelf;
+
+// 定义Python命令（导入FBX）
+string $pythonInCmd = "import maya.cmds as cmds\n";
+$pythonInCmd += "path = \"C:/ModelIO/HMLinkTemp.fbx\"\n";
+$pythonInCmd += "def hmlin(inpath):\n";
+$pythonInCmd += "    cmds.file(inpath, i=True, type=\"FBX\", ignoreVersion=True, mergeNamespacesOnClash=False, options=\"v=0;\", pr=True, importFrameRate=True, importTimeRange=\"override\")\n";
+$pythonInCmd += "hmlin(path)";
+
+// 创建导入按钮
+shelfButton
+    -label "IN"
+    -image1 "pythonFamily.png"
+    -style "iconOnly"
+    -annotation "Import FBX"
+    -sourceType "python"
+    -command $pythonInCmd
+    -parent $currentShelf;
