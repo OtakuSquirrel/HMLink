@@ -4,15 +4,11 @@ A Bridge between Houdini and Maya
 
 ## Houdini Setup
 
-## How to install on Houdini
+## Package Install (JSON)
 
-Find hmlink.json in HMLink/Houdini
+Find `hmlink.json` in `HMLink/Houdini`
 
-Edit
-
-"hmlink": "C:/Users/otaku/Documents/GitHub/HMLink/Houdini"
-
-to your path.
+Edit `"hmlink": "C:/Users/otaku/Documents/GitHub/HMLink/Houdini"` to your path.
 
 Copy and paste this json file to Houdini package path, by default it is in 
 
@@ -20,7 +16,16 @@ Copy and paste this json file to Houdini package path, by default it is in
 C:\Program Files\Side Effects Software\Houdini XX.X.XXX\packages
 ```
 
-## How to create Shelf in Houdini
+### Manual Install
+
+Edit `Houdini.env`, add:
+
+```
+HOUDINI_PATH = "C:/HMLink/Houdini;&"
+PYTHONPATH = "C:/HMLink/Houdini;&"
+```
+
+## Create Shelf in Houdini
 
 run in houdini python shell:
 
@@ -39,4 +44,4 @@ You need to select a node before you export and import.
 
 ## Maya Setup
 
-Drag and drop the Maya/hml.mel into Maya viewport.
+Drag and drop the `Maya/hml.mel` into Maya viewport.
