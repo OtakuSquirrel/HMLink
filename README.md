@@ -1,4 +1,5 @@
 # HMLink
+
 A Bridge between Houdini and Maya
 
 ## Houdini Setup
@@ -38,4 +39,4 @@ You need to select a node before you export and import.
 
 ## Maya Setup
 
-Drag and drop the hml.mel into Maya viewport.
+Drag and drop the Maya/hml.mel into Maya viewport.
