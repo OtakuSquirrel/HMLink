@@ -4,7 +4,7 @@ A Bridge between Houdini and Maya
 
 Tutorial:
 
-https://youtu.be/-RyY08267lY
+[https://youtu.be/-RyY08267lY](https://youtu.be/jc91a6xMB0g)
 
 ## Houdini Setup
 
