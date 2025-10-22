@@ -39,7 +39,7 @@ def hmhin(input_dir=filedir, tempfilename = True, altname = ''):
     else:
         print('select a node')
         return 0
-
+    
     parent = selnode.parent()
     
     filenode = parent.createNode('file')
@@ -72,7 +72,7 @@ def select_stash_type_siblings():
     selected_nodes = hou.selectedNodes()
     
     if not selected_nodes:
-        hou.ui.displayMessage("请先选择一个节点", severity=hou.severityType.Warning)
+        print('select a node')
         return
     
     # 获取第一个选中节点的父节点
@@ -80,7 +80,7 @@ def select_stash_type_siblings():
     parent_node = first_selected.parent()
     
     if parent_node is None:
-        hou.ui.displayMessage("所选节点没有父级，无法查找同级节点", severity=hou.severityType.Warning)
+        print('select a SOP node')
         return
     
     # 获取同级节点中所有 Stash 类型的节点
@@ -94,8 +94,7 @@ def select_stash_type_siblings():
     
     # 显示结果
     if stash_nodes:
-        msg = f"已选中 {len(stash_nodes)} 个 Stash 类型的同级节点"
+        print(f'select {len(stash_nodes)} nodes')
     else:
-        msg = f"在 {parent_node.path()} 下未找到 Stash 类型的节点"
+        print('did not find stash nodes')
     
-    print(msg)
