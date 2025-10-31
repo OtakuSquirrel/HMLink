@@ -50,3 +50,7 @@ You need to select a node before you export and import.
 ## Maya Setup
 
 Drag and drop the `Maya/hml.mel` into Maya viewport.
+
+## BUG
+
+Bug in `Houdini 21.0.512`, Do not use this houdini version.
