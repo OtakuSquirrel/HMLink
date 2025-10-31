@@ -53,4 +53,4 @@ Drag and drop the `Maya/hml.mel` into Maya viewport.
 
 ## BUG
 
-Bug in `Houdini 21.0.512`, Do not use this houdini version.
+Bug in `Houdini 21.0.512`, Do not use this houdini version. Fixed in `Houdini 21.0.519`
